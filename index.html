@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding invite</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <style>
+    @font-face {
+      font-family: 'Kazakh';
+      src: url('fonts/kzbalmoral_regular.ttf');
+    }
+    @keyframes bounceFast {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(30px);
+      }
+    }
+
+    .bounce-fast {
+      animation: bounceFast 2s infinite;
+    }
+
+    .timer-container {
+      display: flex;
+      gap: 15px;
+    }
+
+    .timer-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 80px;
+    }
+
+    .timer-box span {
+      display: block;
+      font-size: 30px;
+      font-weight: bold;
+      color: #b2228c;
+    }
+
+    .label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #b2228c;
+      margin-top: 5px;
+    }
+
+    #sound-toggle {
+      position: fixed;
+      bottom: 50px;
+      left: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+  </style>
+  <body class="relative font-['Comfortaa'] bg-[#FFF3FB]">
+    <div id="sound-toggle">
+      <svg
+        class="pr-1 w-10"
+        id="sound-icon"
+        version="1.1"
+        id="fi_461146"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 512.001 512.001"
+        style="enable-background: new 0 0 512.001 512.001"
+        xml:space="preserve">
+        <g>
+          <g>
+            <path
+              d="M167.228,82.855v272.542c-15.859-14.147-36.757-22.76-59.632-22.76c-49.45,0-89.681,40.231-89.681,89.682
+                c0,49.451,40.231,89.682,89.681,89.682c49.389,0,89.578-40.13,89.68-89.495h0.002V203.475l266.757-67.621v147.195
+                c-15.859-14.147-36.757-22.76-59.631-22.76c-49.451,0-89.682,40.231-89.682,89.681c0,49.451,40.231,89.682,89.682,89.682
+                c49.45,0,89.681-40.232,89.681-89.682V0L167.228,82.855z"></path>
+          </g>
+        </g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+      </svg>
+    </div>
+
+    <!-- Аудио -->
+    <audio
+      id="bg-music"
+      src="images/karakat-abildina-kyzga-tilek-agugaikz_Zl6uIcoa.mp3"
+      loop></audio>
+
+    <div class="h-screen w-full relative">
+      <img
+        class="h-full w-full object-cover brightness-50"
+        src="images/wedding-couple-hold-hands.jpg"
+        alt="" />
+
+      <div
+        id="main"
+        class="flex flex-col items-center justify-center w-full absolute top-1/2 -translate-y-1/2">
+        <p
+          class="text-2xl md:text-[40px] text-white ow animate__animated animate__fadeInUp animate__delay-faster">
+          Қыз ұзату тойы
+        </p>
+        <p
+          class="text-center font-['Kazakh'] relative text-6xl md:text-8xl mt-10 text-white wow animate__animated animate__fadeInUp animate__delay-1s">
+          Қызымыз Жанельдің қыз ұзату тойы
+        </p>
+        <p
+          class="text-2xl text-white mt-10 wow animate__animated animate__fadeInUp animate__delay-2s">
+          10.08.2025
+        </p>
+        <a href="#block" class="mt-16 bounce-fast">
+          <svg
+            width="21"
+            height="17"
+            viewBox="0 0 21 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.5 6L10.5 15L1.5 6"
+              stroke="#F0BCE3"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M15.5 1L10.5 6L5.5 1"
+              stroke="#F0BCE3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div
+      id="block"
+      class="px-4 md:px-0 flex items-center justify-center w-full relative bottom-16 mb-10">
+      <div
+        class="bg-white w-full md:w-[80%] rounded-lg py-[50px] px-4 flex flex-col items-center">
+        <p
+          class="text-[#B70B9D] text-xl md:text-[40px] font-bold text-center wow animate__animated animate__fadeInUp animate__delay-faster">
+          💍 Құрметті ағайын-туыс, көршілер мен әріптестер, бауырлар,
+          құда-жекжат, дос-жаран!
+        </p>
+        <p
+          class="text-center mt-5 wow animate__animated animate__fadeInUp animate__delay-1s">
+          Сіздерді қызымыз Жанельдің қыз ұзату тойының қадірлі қонағы болуға
+          шақырамыз ❤️ <br />
+        </p>
+
+        <!-- <div class="flex flex-col md:flex-row mt-10">
+          <div class="flex flex-col items-center">
+            <img
+              class="scale-x-[-1] w-80 h-80 object-cover object-center rounded-full"
+              src="images/WhatsApp Image 2025-03-30 at 14.58.57.jpeg"
+              alt="" />
+            <p
+              class="font-['Kazakh'] relative text-6xl md:text-6xl text-[#A40781] mt-10 text-center">
+              Бақытбек Бақдаулет
+            </p>
+            <p class="text-center">Руслан мырза мен Кәмшат ханымның ұлы</p>
+          </div>
+
+          <div class="flex flex-col items-center ml-0 md:ml-16 mt-10 md:mt-0">
+            <img
+              class="scale-x-[-1] w-80 h-80 object-cover object-center rounded-full"
+              src="images/WhatsApp Image 2025-03-30 at 15.06.09.jpeg"
+              alt="" />
+            <p
+              class="font-['Kazakh'] relative text-6xl md:text-6xl text-[#A40781] mt-10 text-center">
+              Сахиева Ақторғын
+            </p>
+            <p class="text-center">Жәнібек мырза мен Айткүл ханымның қызы</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="px-6 w-full flex flex-col items-center justify-center">
+      <img src="images/Group 59.png" alt="" />
+      <p
+        class="text-[#B70B9D] mt-16 text-xl md:text-[40px] font-bold wow animate__animated animate__fadeInUp animate__delay-faster">
+        Біз шаңырақ көтереміз!
+      </p>
+      <p
+        class="mt-5 text-center wow animate__animated animate__fadeInUp animate__delay-1s">
+        🏡 Шаңырағымыз биік, керегеміз кең болсын! Осы бақытты күнде сіздердің
+        жылы тілектеріңіз біз үшін аса маңызды!
+      </p>
+      <p
+        class="text-2xl md:text-[40px] mt-10 text-center wow animate__animated animate__fadeInUp animate__delay-2s">
+        2025 жыл, 10 - тамыз
+      </p>
+
+      <div class="timer-container mt-10">
+        <div class="timer-box flex items-center flex-col">
+          <span id="days">00</span>
+          <div class="label text-center">Күн</div>
+        </div>
+        <div class="timer-box flex items-center flex-col">
+          <span id="hours">00</span>
+          <div class="label text-center">Сағат</div>
+        </div>
+        <div class="timer-box flex items-center flex-col">
+          <span id="minutes">00</span>
+          <div class="label text-center">Mинут</div>
+        </div>
+        <div class="timer-box flex items-center flex-col">
+          <span id="seconds">00</span>
+          <div class="label text-center">Секунд</div>
+        </div>
+      </div>
+
+      <div
+        class="w-full video-main flex flex-col items-center relative rounded-lg mt-14 mb-10 h-full md:h-[600px]">
+        <img
+          class="w-full rounded-xl h-full object-cover brightness-60"
+          src="images/close-up-shiny-glassware-standing-dinner-plate.jpg"
+          alt="" />
+
+        <div class="px-4 absolute banner-bot top-14 flex flex-col items-center">
+          <img src="images/wedding-ring.svg" alt="" />
+          <p
+            class="text-3xl md:text-[40px] mt-10 text-center text-white w-full border-b border-white py-5 wow animate__animated animate__fadeInUp animate__delay-faster">
+            Қыз ұзату тойы
+          </p>
+
+          <p
+            class="text-white mt-10 font-semibold text-xl wow animate__animated animate__fadeInUp animate__delay-1s">
+            Басталуы: 10-тамыз, 17:00
+          </p>
+          <p
+            class="text-white mt-10 font-semibold text-xl text-center wow animate__animated animate__fadeInLeft">
+            Mereke Hall мейрамханасы
+          </p>
+          <p
+            class="text-white mt-10 font-semibold text-xl text-center wow animate__animated animate__fadeInLeft">
+            Астана қаласы, Е-489, 7 көшесі
+            <br />
+          </p>
+
+          <a
+            href="https://go.2gis.com/r2fAP"
+            target="_blank"
+            class="mt-8 px-8 font-semibold py-2 rounded-lg bg-white text-[#E382D3]"
+            >Картадан көру</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="px-6 w-full flex flex-col items-center justify-center mt-14">
+      <img src="images/Group 59.png" alt="" />
+      <p
+        class="font-['Kazakh'] relative text-6xl md:text-8xl mt-10 text-[#B70B9D] wow animate__animated animate__fadeInUp">
+        Той бағдарламасы
+      </p>
+
+      <div class="w-full flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center mb-3">
+          <p
+            class="text-2xl font-semibold wow animate__animated animate__fadeInUp">
+            16:00
+          </p>
+          <p
+            class="text-2xl font-medium wow animate__animated animate__fadeInUp">
+            Қонақтардың жиналуы
+          </p>
+        </div>
+
+        <div class="w-[0.9px] h-32 bg-black mb-3"></div>
+
+        <div class="flex flex-col items-center mb-3">
+          <p
+            class="text-2xl font-semibold wow animate__animated animate__fadeInUp">
+            17:00
+          </p>
+          <p
+            class="text-2xl font-medium wow animate__animated animate__fadeInUp">
+            Тойдың басталуы
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="px-6 w-full flex flex-col items-center justify-center mt-14">
+      <img src="images/Group 59.png" alt="" />
+
+      <iframe
+        class="mt-10 w-full"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdaPj-r7ik4Q7l2eS0lL98Gu_BS32tX41MpX18-rTZcFLe0_w/viewform?embedded=true"
+        width="640"
+        height="760"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Загрузка…</iframe
+      >
+    </div>
+
+    <div class="px-6 w-full flex flex-col items-center justify-center mt-14">
+      <img src="images/Group 59.png" alt="" />
+      <p
+        class="font-['Kazakh'] relative text-6xl md:text-8xl mt-10 text-[#B70B9D] wow animate__animated animate__fadeInUp">
+        Той иелері:
+      </p>
+
+      <p class="text-2xl font-bold">Қасымбек - Күлайхан</p>
+    </div>
+
+    <footer class="w-full h-96 mt-10 relative">
+      <img
+        class="w-full h-full object-cover brightness-60"
+        src="images/close-up-shiny-glassware-standing-dinner-plate.jpg"
+        alt="" />
+      <div
+        class="flex flex-col items-center justify-center w-full absolute top-1/2 -translate-y-1/2">
+        <p
+          class="font-['Kazakh'] relative text-6xl md:text-8xl mt-10 text-white wow animate__animated animate__fadeInUp animate__delay-faster">
+          Жанельдің қыз ұзату тойы
+        </p>
+        <p
+          class="text-2xl text-white mt-10 wow animate__animated animate__fadeInUp animate__delay-1s">
+          10.08.2025
+        </p>
+        <a class="underline text-white mt-10" href="https://wa.me/77714006829">
+          <p class="text-center text-white">
+            Тойға шақыртуға тапсырыс беру үшін Whatsapp +7 771 400 6829
+          </p>
+        </a>
+        <a href="#main" class="mt-16 bounce-fast">
+          <svg
+            class="rotate-180"
+            width="21"
+            height="17"
+            viewBox="0 0 21 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.5 6L10.5 15L1.5 6"
+              stroke="#F0BCE3"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M15.5 1L10.5 6L5.5 1"
+              stroke="#F0BCE3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script>
+      function startCountdown(targetDate) {
+        function updateTimer() {
+          const now = new Date().getTime();
+          const timeLeft = targetDate - now;
+
+          if (timeLeft <= 0) {
+            document.querySelector('.timer-container').innerHTML =
+              '<h2>Бүгін - ерекше күн!</h2>';
+            clearInterval(timerInterval);
+            return;
+          }
+
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          document.getElementById('days').textContent = days
+            .toString()
+            .padStart(2, '0');
+          document.getElementById('hours').textContent = hours
+            .toString()
+            .padStart(2, '0');
+          document.getElementById('minutes').textContent = minutes
+            .toString()
+            .padStart(2, '0');
+          document.getElementById('seconds').textContent = seconds
+            .toString()
+            .padStart(2, '0');
+        }
+
+        updateTimer();
+        const timerInterval = setInterval(updateTimer, 1000);
+      }
+
+      const weddingDate = new Date('2025-08-10T00:00:00').getTime();
+      startCountdown(weddingDate);
+
+      function adjustVideoMainHeight() {
+        var banner = document.querySelector('.banner-bot');
+        var videoMain = document.querySelector('.video-main');
+
+        if (banner && videoMain) {
+          var bannerHeight = banner.offsetHeight;
+          var desiredHeight = bannerHeight + 100;
+          videoMain.style.height = desiredHeight + 'px';
+        }
+      }
+
+      // Выполняем при загрузке и изменении размера окна
+      window.addEventListener('load', adjustVideoMainHeight);
+      window.addEventListener('resize', adjustVideoMainHeight);
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          });
+        });
+      });
+
+      const audio = document.getElementById('bg-music');
+      const soundToggle = document.getElementById('sound-toggle');
+      const soundIcon = document.getElementById('sound-icon');
+
+      let isPlaying = false;
+
+      soundToggle.addEventListener('click', () => {
+        if (isPlaying) {
+          audio.pause();
+          soundIcon.src =
+            'https://cdn-icons-png.flaticon.com/512/727/727240.png'; // выключен
+        } else {
+          audio
+            .play()
+            .then(() => {
+              soundIcon.src =
+                'https://cdn-icons-png.flaticon.com/512/727/727245.png'; // включен
+            })
+            .catch((e) => console.log('Ошибка воспроизведения:', e));
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+  </body>
+</html>
